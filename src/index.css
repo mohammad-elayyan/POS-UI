@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  .home * {
+    @apply transition-colors duration-300 ease-in-out;
+  }
+
+  :root {
+    --color-gradient-1: linear-gradient(90deg, #fe9366, #feb798);
+    --color-gradient-2: linear-gradient(90deg, #0ac282, #0df3a3);
+    --color-gradient-3: linear-gradient(90deg, #fe5d70, #fe909d);
+    --color-gradient-4: linear-gradient(90deg, #01aaad, #01dbdf);
+  }
+
+  @theme {
+    --color-main: #f6f7fb;
+    --color-main-text: #717375;
+    --color-primary: #3b82f6;
+    --color-secondary: #1c1f27;
+    --color-secondary-text: #b5b8be;
+    --color-inverted-text: #1b1b1b;
+    --color-error: #ef4444;
+    --color-success: #17be83;
+    --color-warning: #fe9366;
+    --color-accent: #fe8492;
+    --color-navbar: #ffffff;
+  }
+
+  .dark {
+    --color-main: #1c1f27;
+    --color-main-text: #b5b8be;
+    --color-primary: #3b82f6;
+    --color-secondary: #f3f3f3;
+    --color-inverted-text: #ffffff;
+    --color-secondary-text: #717375;
+    --color-error: #ef4444;
+    --color-success: #17be83;
+    --color-warning: #fe9366;
+    --color-accent: #fe8492;
+    --color-navbar: #2b2e38;
+  }
+
+  html {
+    @apply bg-main text-main-text;
+  }
+
+  body {
+    font-family: "Roboto", sans-serif;
+  }
+
+  .input {
+    @apply bg-main text-main-text border border-secondary-text text-base font-medium rounded-sm px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-primary;
+  }
+
+  .loginBtn {
+    @apply bg-primary text-white text-lg font-medium rounded-sm px-3 py-2.5 hover:bg-blue-700 cursor-pointer;
+  }
+
+  .searchInput {
+    @apply w-full pl-7 pr-2 py-1 bg-main text-main-text border border-secondary-text rounded-full focus:outline-none focus:ring-1 focus:ring-secondary;
+  }
+
+  .counterBadge {
+    @apply text-white text-xs w-4 h-4 rounded-full flex items-center justify-center absolute left-1.5 -top-2.5;
+  }
+}
