@@ -15,7 +15,7 @@ const Sidebar = () => {
           <li className="text-secondary-text hover:text-main-text border-b border-main-text cursor-pointer hover:bg-main px-4 py-3">
             Dashboard
           </li>
-          <li className="text-secondary-text hover:text-main-text border-b border-main-text cursor-pointer hover:bg-main px-4 py-2">
+          <li className="text-secondary-text hover:text-main-text border-b border-main-text cursor-pointer bg-gray-800 hover:bg-main px-4 py-2 ">
             Products
           </li>
           <li className="text-secondary-text hover:text-main-text border-b border-main-text cursor-pointer hover:bg-main px-4 py-2">
